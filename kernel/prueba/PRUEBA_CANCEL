@@ -1,0 +1,13 @@
+SET DX 0              
+SET AX 1              
+THREAD_CREATE PLANI_THREAD 6 
+SUM DX AX             
+THREAD_CREATE PLANI_THREAD 5 
+SUM DX AX             
+THREAD_CREATE PLANI_THREAD 4 
+SUM DX AX             
+THREAD_CREATE PLANI_THREAD 3 
+SUM DX AX             
+THREAD_CANCEL 4      
+THREAD_JOIN 2         
+PROCESS_EXIT          
